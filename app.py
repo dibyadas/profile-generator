@@ -1,11 +1,20 @@
 from flask import Flask, redirect, url_for, request, render_template
+import json
 
 app = Flask(__name__)
 
 
-@app.route('/<name>')
-def main(name):
-    return render_template('test.html', name=name)
+@app.route('/<url_name>')
+def main(url_name):
+	data = json
+	with open("data2.json") as a:
+		data = json.load(a)
+	id = data[url_name]
+	return render_template('test.html', name=id['name'],bio=id['bio'],email=id['email'],github_handle=id['github_handle'], fbid=id['fbid'])
+
+
+
+
 
 
 if __name__ == "__main__":  # This is for local testin

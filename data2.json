@@ -1,0 +1,18 @@
+{
+	"dibyadas" : {
+		"name" : "Dibya Prakash Das",
+		"fbid" : "dibyadas.1069",
+		"email" : "dibyadascool@gmail.com",
+		"github_handle" : "dibyadas",
+		"bio" : "Hi! I am a 1st year undergraduate student of the Indian Institiute of Technology, Kharagpur"
+	},
+	"someone" : {
+		"name" : "someone",
+		"fbid" : "someone.something",
+		"email" : "someone@somewhere.com",
+		"github_handle" : "something",
+		"bio" : "Hi! I am a blah blah blah "	
+	}
+
+
+}
