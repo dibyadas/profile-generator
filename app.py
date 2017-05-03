@@ -1,6 +1,6 @@
 from flask import Flask, redirect, url_for, request, render_template
 import json
-
+import requests
 app = Flask(__name__)
 
 
@@ -10,7 +10,9 @@ def main(url_name):
 	with open("data2.json") as a:
 		data = json.load(a)
 	id = data[url_name]
-	return render_template('test.html', name=id['name'],bio=id['bio'],email=id['email'],github_handle=id['github_handle'], fbid=id['fbid'])
+	r = requests.get("http://api.github.com/users/"+url_name)
+	y = json.loads(r.content.decode())
+	return render_template('test.html', name=id['name'],image=y['avatar_url'],bio=id['bio'],email=id['email'],github_handle=id['github_handle'], fbid=id['fbid'])
 
 
 
